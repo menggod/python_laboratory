@@ -25,8 +25,8 @@ def process_oa():
 
             base_time = datetime(1900, 1, 1, 21, 0, 0)
             if date_time >= base_time:
-                minute_int = random.randint(1, 6)
-                second_int = random.randint(0, 60)
+                minute_int = random.randint(2, 6)
+                second_int = random.randint(8, 60)
                 date_time = date_time + timedelta(minutes=minute_int, seconds=second_int)
                 # print(date_time, minute_int, second_int)
 
