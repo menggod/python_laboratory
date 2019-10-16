@@ -11,7 +11,9 @@ def process_depend():
         if not depend_text:
             # 读到数据最后跳出，结束循环。数据的最后也就是读不到数据了，mystr为空的时候
             break
-        depend_map.update(depend_text, depend_text)
+        # depend_map.update(depend_text, depend_text)
+        depend_map[depend_text[13]] = depend_text
+    sorted(depend_map.items(), key=lambda x: x[0])
     print(depend_map)
 
 
