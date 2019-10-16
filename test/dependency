@@ -1,3 +1,5 @@
+
+    api 'top.zibin:Luban:1.1.8'
     api 'com.abit.framework:spi-loader:1.0'
     api 'com.abit.framework:spi-annotation:1.0'
     api 'com.bitauto.lib.bundle:host:201907261118-SNAPSHOT'
@@ -140,7 +142,7 @@
     api 'com.bitauto.lib.im:rong-imlib:201903121012-SNAPSHOT'
     api 'org.greenrobot:eventbus:3.1.1'
     api 'com.yiche.elita_lib:elita-ai:0.2.0'
-    api 'top.zibin:Luban:1.1.8'
+
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
     api 'com.kk.taurus.playerbase:playerbase:3.3.4'
     api 'com.bitauto.lib.xiaoai:xiaoai-baidu:201901101046'
