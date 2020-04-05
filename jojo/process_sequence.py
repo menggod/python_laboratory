@@ -29,18 +29,20 @@ def process_list():
                 fp.close()
 
                 if sequence[0].find(Sequence_3) > 0:
+
                     # 这个是处理序列3的地方
 
-                    sequence = sequence[0].split(Sequence_3, 1)
-                    file1 = file.replace(".seq", '-L.seq')
-                    fp = open(path_end + file1, "w")
-                    fp.write(sequence[0])
-                    fp.close()
-
-                    file2 = file.replace(".seq", '-H.seq')
-                    fp = open(path_end + file2, "w")
-                    fp.write(sequence[1])
-                    fp.close()
+                    # sequence = sequence[0].split(Sequence_3, 1)
+                    # file1 = file.replace(".seq", '-L.seq')
+                    # fp = open(path_end + file1, "w")
+                    # fp.write(sequence[0])
+                    # fp.close()
+                    #
+                    # file2 = file.replace(".seq", '-H.seq')
+                    # fp = open(path_end + file2, "w")
+                    # fp.write(sequence[1])
+                    # fp.close()
+                    pass
 
                 else:
                     print(file + "没有找到特定序列3")
