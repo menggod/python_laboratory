@@ -14,15 +14,18 @@ def process_list():
         file_string = open(path + "/" + file, "r", encoding="utf-8", errors="ignore")
         sequence = file_string.read()
 
+
+        sequence = sequence.replace("^^", "")
         sequence = sequence.replace("\n", "")
+
 
         if sequence.find(Sequence_1) > 0:
             sequence = sequence.split(Sequence_1, 1)
             if sequence[1].find(Sequence_2) > 0:
                 sequence = sequence[1].split(Sequence_2, 1)
 
-                # file3 = file.replace(".seq", '-jojo.seq')
-                fp = open(path_end + file, "w")
+                file3 = file.replace(".seq", '-jojo.seq')
+                fp = open(path_end + file3, "w")
                 fp.write(sequence[0])
                 fp.close()
 
