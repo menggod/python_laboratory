@@ -28,7 +28,7 @@ def process_list(isthird):
                     fp.write(sequence[0])
                     fp.close()
 
-                if isthird:
+                else:
                     if sequence[0].find(Sequence_3) > 0:
                         # 这个是处理序列3的地方
                         sequence = sequence[0].split(Sequence_3, 1)
@@ -50,6 +50,7 @@ def process_list(isthird):
             print(file + "没有找到特定序列1")
 
 
+# 只处理 12序列
 if __name__ == '__main__':
     # process_list(True)
     process_list(False)
