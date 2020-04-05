@@ -54,6 +54,6 @@ def process_list(isthird):
 
 if __name__ == '__main__':
 
-    # process_list(True)
-    process_list(False)
+    process_list(True)
+    # process_list(False)
     # pass
