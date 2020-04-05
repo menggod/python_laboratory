@@ -21,8 +21,8 @@ def process_list():
             if sequence[1].find(Sequence_2) > 0:
                 sequence = sequence[1].split(Sequence_2, 1)
 
-                file3 = file.replace(".seq", '-jojo.seq')
-                fp = open(path_end + file3, "w")
+                # file3 = file.replace(".seq", '-jojo.seq')
+                fp = open(path_end + file, "w")
                 fp.write(sequence[0])
                 fp.close()
 
