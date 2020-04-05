@@ -5,7 +5,7 @@ Sequence_2 = "GCTAGC"
 Sequence_3 = "TCCGGAGGGTCGACCATAACTTCGTATAATGTATACTATACGAAGTTATCCTCGAGCGGTACC"
 
 
-def process_list():
+def process_list(isthird):
     path = "process_list"
     path_end = 'process_end_list/'
     file_list = os.listdir(path)
@@ -23,25 +23,25 @@ def process_list():
                 sequence = sequence[1].split(Sequence_2, 1)
 
                 # 这个是处理序列2的地方
-                file3 = file.replace(".seq", '-jojo.seq')
-                fp = open(path_end + file3, "w")
-                fp.write(sequence[0])
-                fp.close()
+                if not isthird:
+                    file3 = file.replace(".seq", '-jojo.seq')
+                    fp = open(path_end + file3, "w")
+                    fp.write(sequence[0])
+                    fp.close()
 
                 if sequence[0].find(Sequence_3) > 0:
-
                     # 这个是处理序列3的地方
+                    if isthird:
+                        sequence = sequence[0].split(Sequence_3, 1)
+                        file1 = file.replace(".seq", '-L.seq')
+                        fp = open(path_end + file1, "w")
+                        fp.write(sequence[0])
+                        fp.close()
 
-                    # sequence = sequence[0].split(Sequence_3, 1)
-                    # file1 = file.replace(".seq", '-L.seq')
-                    # fp = open(path_end + file1, "w")
-                    # fp.write(sequence[0])
-                    # fp.close()
-                    #
-                    # file2 = file.replace(".seq", '-H.seq')
-                    # fp = open(path_end + file2, "w")
-                    # fp.write(sequence[1])
-                    # fp.close()
+                        file2 = file.replace(".seq", '-H.seq')
+                        fp = open(path_end + file2, "w")
+                        fp.write(sequence[1])
+                        fp.close()
                     pass
 
                 else:
@@ -53,4 +53,7 @@ def process_list():
 
 
 if __name__ == '__main__':
-    process_list()
+
+    # process_list(True)
+    process_list(False)
+    pass
